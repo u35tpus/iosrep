@@ -10,6 +10,6 @@ http://en.wikipedia.org/wiki/Lsof
 
 To make tool:
 
-cd lsof
-make clean
-make
+    cd lsof
+    make clean
+    make
