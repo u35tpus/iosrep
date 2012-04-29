@@ -132,7 +132,7 @@ version.h:	FRC
 	fi
 	@echo '#define	LSOF_LDFLAGS	"${CFGL}"' >> version.h
 	@if [ "X${LSOF_LOGNAME}" = "X" ]; then \
-	  echo '#define	LSOF_LOGNAME	"${LOGNAME}"' >> version.h; \
+	  echo '#define	LSOF_LOGNAME	""' >> version.h; \
 	else \
 	  if [ "${LSOF_LOGNAME}" = "none" ]; then \
 	    echo '#define	LSOF_LOGNAME	""' >> version.h; \
@@ -150,12 +150,12 @@ version.h:	FRC
 	  fi \
 	fi
 	@if [ "X${LSOF_USER}" = "X" ]; then \
-	  echo '#define	LSOF_USER	"${USER}"' >> version.h; \
+	  echo '#define	LSOF_USER	""' >> version.h; \
 	else \
 	  if [ "${LSOF_USER}" = "none" ]; then \
 	    echo '#define	LSOF_USER	""' >> version.h; \
 	  else \
-	    echo '#define	LSOF_USER	"${LSOF_USER}"' >> version.h; \
+	    echo '#define	LSOF_USER	""' >> version.h; \
 	  fi \
 	fi
 	@sed '/VN/s/.ds VN \(.*\)/#define	LSOF_VERSION	"\1"/' < version >> version.h
