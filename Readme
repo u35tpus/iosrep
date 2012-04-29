@@ -1,0 +1,4 @@
+To make tool:
+
+make clean
+make
